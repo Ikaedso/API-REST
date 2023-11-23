@@ -1,0 +1,58 @@
+###
+POST http://localhost:9000/api/ventas HTTP/1.1
+Content-Type: application/json
+
+{
+  "fecha_venta": "2023-11-22",
+  "metodo_pago": "Transferencia",
+  "total_venta": 300,
+  "total_pedido": 300,
+  "nombre": "Juan Felipe",
+  "telefono": "3202553088",
+  "documento": "1033487380",
+  "correo": "fepesanchez@gmail.com",
+  "productos": [
+    {
+      "nombre": "Producto1",
+      "precio": 100
+    },
+    {
+      "nombre": "Producto2",
+      "precio": 200
+    }
+    // ... Agrega más productos según sea necesario
+  ]
+}
+
+
+###
+GET http://localhost:9000/api/ventas HTTP/1.1
+
+###
+GET http://localhost:9000/api/ventas/654d89ebb8d30ec1426b09ae HTTP/1.1
+
+###
+PUT http://localhost:9000/api/ventas/654d89ebb8d30ec1426b09ae HTTP/1.1
+Content-Type: application/json
+
+{
+  "fecha_venta": "2023-09-11T05:00:00.000+00:00",
+  "metodo_pago": "Efectivo",
+  "total_venta": 6000,
+  "total_pedido": 6000,
+  "nombre": "Emmanuel Sanchez",
+  "telefono": "3203097136",
+  "documento": "1033487380",
+  "correo": "sanchez252901@gmail.com",
+  "productos": [
+    {
+      "nombre": "Nuevo Producto",
+      "precio": 150
+    }
+    // ... Agrega más productos según sea necesario
+  ]
+}
+
+
+###
+DELETE http://localhost:9000/api/ventas/655954a286a003d721436dea HTTP/1.1
